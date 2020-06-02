@@ -151,11 +151,11 @@ class critical {
 		// is the class name used as the function name?
 		if ($lastClassName !== false && strpos($line, 'function') !== false) {
 			if (preg_match("#function {$lastClassName}\s?\(#", $line)) {
-				return true;
+				return $lastClassName;
 			}
 		}
 
 		return false;
 	}
 }
-?>
+
